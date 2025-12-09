@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Perpetuo - Cafetería y Desayunería. Disfruta de los mejores desayunos, café artesanal y postres en un ambiente acogedor.">
+    <meta name="keywords" content="cafetería, desayunos, café, postres, Perpetuo">
+    <title>Perpetuo - Cafetería & Desayunería</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- NAVIGATION -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">Perpetuo</a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">Inicio</a></li>
+                <li><a href="#menu" class="nav-link">Menú</a></li>
+                <li><a href="#services" class="nav-link">Servicios</a></li>
+                <li><a href="#delivery" class="nav-link">Domicilio</a></li>
+                <li><a href="#hours" class="nav-link">Horarios</a></li>
+                <li><a href="#location" class="nav-link">Ubicación</a></li>
+                <li><a href="#contact" class="nav-link">Contacto</a></li>
+            </ul>
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Perpetuo</h1>
+            <p class="hero-subtitle">Cafetería & Desayunería</p>
+            <p class="hero-subtitle">Donde cada mañana es especial</p>
+            <div class="hero-buttons">
+                <a href="#menu" class="btn btn-primary">Ver Menú</a>
+                <a href="#contact" class="btn btn-secondary">Contáctanos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- MENU SECTION -->
+    <section class="menu section" id="menu">
+        <div class="container">
+            <h2 class="section-title">Nuestro Menú</h2>
+
+            <div class="menu-categories">
+                <button class="category-btn active" data-category="all">Todo</button>
+                <button class="category-btn" data-category="desayunos">Desayunos</button>
+                <button class="category-btn" data-category="bebidas">Bebidas</button>
+                <button class="category-btn" data-category="postres">Postres</button>
+            </div>
+
+            <div class="menu-grid" id="menuGrid">
+                <!-- Desayunos -->
+                <div class="menu-item" data-category="desayunos">
+                    <div class="menu-item-image">🍳</div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-title">Desayuno Perpetuo</h3>
+                            <span class="menu-item-price">$120</span>
+                        </div>
+                        <p class="menu-item-description">
+                            Huevos al gusto, frijoles refritos, chilaquiles, pan dulce y café americano.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="desayunos">
+                    <div class="menu-item-image">🥑</div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-title">Tostadas de Aguacate</h3>
+                            <span class="menu-item-price">$95</span>
+                        </div>
+                        <p class="menu-item-description">
+                            Pan artesanal tostado con aguacate fresco, huevo pochado y semillas.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="desayunos">
+                    <div class="menu-item-image">🥞</div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-title">Hot Cakes Especiales</h3>
+                            <span class="menu-item-price">$85</span>
+                        </div>
+                        <p class="menu-item-description">
+                            Stack de hot cakes esponjosos con miel de maple, mantequilla y fruta fresca.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="desayunos">
+                    <div class="menu-item-image">🌯</div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-title">Burrito de Desayuno</h3>
+                            <span class="menu-item-price">$75</span>
+                        </div>
+                        <p class="menu-item-description">
+                            Tortilla de harina con huevo, jamón, queso, frijoles y salsa.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Bebidas -->
+                <div class="menu-item" data-category="bebidas">
+                    <div class="menu-item-image">☕</div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-title">Café Americano</h3>
+                            <span class="menu-item-price">$35</span>
+                        </div>
+                        <p class="menu-item-description">
+                            Café de especialidad, tostado artesanalmente. Servido caliente o frío.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="bebidas">
+                    <div class="menu-item-image">🥛</div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-title">Latte</h3>
+                            <span class="menu-item-price">$50</span>
+                        </div>
+                        <p class="menu-item-description">
+                            Espresso con leche vaporizada y arte latte. Disponible con leches vegetales.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="bebidas">
+                    <div class="menu-item-image">🍵</div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-title">Té Chai Latte</h3>
+                            <span class="menu-item-price">$55</span>
+                        </div>
+                        <p class="menu-item-description">
+                            Té chai especiado con leche vaporizada, canela y miel.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="bebidas">
+                    <div class="menu-item-image">🧋</div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-title">Smoothie del Día</h3>
+                            <span class="menu-item-price">$65</span>
+                        </div>
+                        <p class="menu-item-description">
+                            Batido de frutas frescas con yogurt, granola y semillas de chía.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Postres -->
+                <div class="menu-item" data-category="postres">
+                    <div class="menu-item-image">🍰</div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-title">Pastel de Chocolate</h3>
+                            <span class="menu-item-price">$60</span>
+                        </div>
+                        <p class="menu-item-description">
+                            Rebanada de pastel de chocolate belga con ganache y frutos rojos.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="postres">
+                    <div class="menu-item-image">🥐</div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-title">Croissant</h3>
+                            <span class="menu-item-price">$45</span>
+                        </div>
+                        <p class="menu-item-description">
+                            Croissant francés recién horneado. Disponible natural o relleno.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="postres">
+                    <div class="menu-item-image">🍪</div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-title">Galletas Artesanales</h3>
+                            <span class="menu-item-price">$30</span>
+                        </div>
+                        <p class="menu-item-description">
+                            Galletas horneadas diariamente. Chispas de chocolate, avena o nuez.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="postres">
+                    <div class="menu-item-image">🧁</div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-title">Cupcake Especial</h3>
+                            <span class="menu-item-price">$50</span>
+                        </div>
+                        <p class="menu-item-description">
+                            Cupcake del día con frosting de crema y decoración artesanal.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section class="services section" id="services">
+        <div class="container">
+            <h2 class="section-title">Nuestros Servicios</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🛎️</div>
+                    <h3>Servicio a Domicilio</h3>
+                    <p>Entregamos tus desayunos favoritos directamente a tu puerta.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">📱</div>
+                    <h3>Pedidos en Línea</h3>
+                    <p>Ordena fácilmente a través de nuestra app o sitio web.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🎉</div>
+                    <h3>Eventos Especiales</h3>
+                    <p>Catering para desayunos corporativos y eventos privados.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">☕</div>
+                    <h3>Café de Especialidad</h3>
+                    <p>Granos seleccionados y tostados artesanalmente.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🥖</div>
+                    <h3>Panadería Fresca</h3>
+                    <p>Pan y repostería horneados diariamente en nuestro local.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🌱</div>
+                    <h3>Opciones Saludables</h3>
+                    <p>Menú con alternativas veganas, vegetarianas y sin gluten.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOURS SECTION -->
+    <section class="hours section" id="hours">
+        <div class="container">
+            <h2 class="section-title">Horarios de Atención</h2>
+            <div class="hours-container">
+                <div class="hours-grid">
+                    <div class="hours-row">
+                        <span class="hours-day">Lunes - Viernes</span>
+                        <span class="hours-time">7:00 AM - 3:00 PM</span>
+                    </div>
+                    <div class="hours-row">
+                        <span class="hours-day">Sábado</span>
+                        <span class="hours-time">8:00 AM - 4:00 PM</span>
+                    </div>
+                    <div class="hours-row">
+                        <span class="hours-day">Domingo</span>
+                        <span class="hours-time">8:00 AM - 2:00 PM</span>
+                    </div>
+                    <div class="hours-row">
+                        <span class="hours-day">Días Festivos</span>
+                        <span class="hours-time">Horario Especial</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LOCATION SECTION -->
+    <section class="location section" id="location">
+        <div class="container">
+            <h2 class="section-title">Encuéntranos</h2>
+            <div class="location-content">
+                <div class="location-info">
+                    <h3>Nuestra Ubicación</h3>
+                    <div class="location-details">
+                        <div class="location-item">
+                            <span class="location-icon">📍</span>
+                            <div class="location-text">
+                                <strong>Dirección:</strong><br>
+                                Av. Principal #123, Col. Centro<br>
+                                Ciudad, Estado, CP 12345
+                            </div>
+                        </div>
+                        <div class="location-item">
+                            <span class="location-icon">🚗</span>
+                            <div class="location-text">
+                                <strong>Estacionamiento:</strong><br>
+                                Disponible en la parte trasera del local
+                            </div>
+                        </div>
+                        <div class="location-item">
+                            <span class="location-icon">🚌</span>
+                            <div class="location-text">
+                                <strong>Transporte Público:</strong><br>
+                                Líneas 5, 12 y 18 - Parada Centro
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="map-container" id="map">
+                    🗺️
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DELIVERY SECTION -->
+    <section class="delivery section" id="delivery">
+        <div class="container">
+            <h2 class="section-title">Pide a Domicilio</h2>
+            <p style="text-align: center; margin-bottom: 3rem; font-size: 1.2rem;">Disfruta de Perpetuo sin salir de
+                casa</p>
+            <div class="delivery-grid">
+                <a href="#" class="delivery-card rappi">
+                    <div class="delivery-logo">Rappi</div>
+                    <span class="delivery-cta">Pedir ahora</span>
+                </a>
+                <a href="#" class="delivery-card ubereats">
+                    <div class="delivery-logo">Uber<span style="font-weight: 400;">Eats</span></div>
+                    <span class="delivery-cta">Pedir ahora</span>
+                </a>
+                <a href="#" class="delivery-card didi">
+                    <div class="delivery-logo">DiDi Food</div>
+                    <span class="delivery-cta">Pedir ahora</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact section" id="contact">
+        <div class="container">
+            <h2 class="section-title">Contáctanos</h2>
+            <div class="contact-container">
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Nombre Completo</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Teléfono</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensaje</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                </form>
+
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-card-icon">📞</div>
+                        <h4>Teléfono</h4>
+                        <p>(55) 1234-5678</p>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-card-icon">📧</div>
+                        <h4>Email</h4>
+                        <p>hola@perpetuo.com</p>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-card-icon">💬</div>
+                        <h4>WhatsApp</h4>
+                        <p>(55) 9876-5432</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Perpetuo</h3>
+                    <p>Cafetería & Desayunería</p>
+                    <p>Donde cada mañana es especial desde 2020</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook">📘</a>
+                        <a href="#" class="social-link" aria-label="Instagram">📷</a>
+                        <a href="#" class="social-link" aria-label="Twitter">🐦</a>
+                        <a href="#" class="social-link" aria-label="TikTok">🎵</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Enlaces Rápidos</h3>
+                    <a href="#menu">Menú</a>
+                    <a href="#services">Servicios</a>
+                    <a href="#hours">Horarios</a>
+                    <a href="#location">Ubicación</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <p>📞 (55) 1234-5678</p>
+                    <p>📧 hola@perpetuo.com</p>
+                    <p>📍 Av. Principal #123</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Horarios</h3>
+                    <p>Lun-Vie: 7:00 AM - 3:00 PM</p>
+                    <p>Sábado: 8:00 AM - 4:00 PM</p>
+                    <p>Domingo: 8:00 AM - 2:00 PM</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Perpetuo Cafetería & Desayunería. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

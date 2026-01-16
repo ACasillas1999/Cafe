@@ -125,46 +125,79 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // ===================================
-    // CONTACT FORM
+    // CONTACT FORM (Using FormSubmit)
     // ===================================
     const contactForm = document.getElementById('contactForm');
 
     contactForm.addEventListener('submit', function (e) {
-        e.preventDefault();
-
         // Get form values
         const name = document.getElementById('name').value;
         const email = document.getElementById('email').value;
-        const phone = document.getElementById('phone').value;
         const message = document.getElementById('message').value;
 
         // Basic validation
         if (!name || !email || !message) {
-            alert('Por favor completa todos los campos requeridos.');
+            e.preventDefault();
+            showMessage('Por favor completa todos los campos requeridos.', 'error');
             return;
         }
 
         // Email validation
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(email)) {
-            alert('Por favor ingresa un correo electrónico válido.');
+            e.preventDefault();
+            showMessage('Por favor ingresa un correo electrÃ³nico vÃ¡lido.', 'error');
             return;
         }
 
-        // Simulate form submission
-        alert(`¡Gracias ${name}! Tu mensaje ha sido enviado. Nos pondremos en contacto contigo pronto.`);
-
-        // Reset form
-        contactForm.reset();
-
-        // In a real application, you would send this data to a server
-        // Example:
-        // fetch('/api/contact', {
-        //     method: 'POST',
-        //     headers: { 'Content-Type': 'application/json' },
-        //     body: JSON.stringify({ name, email, phone, message })
-        // });
+        // Show loading state
+        const submitBtn = contactForm.querySelector('button[type="submit"]');
+        submitBtn.textContent = 'Enviando...';
+        submitBtn.style.opacity = '0.7';
+        
+        // Form will submit naturally to FormSubmit
+        // FormSubmit will handle the email sending and redirect
     });
+
+    // Function to show messages to user
+    function showMessage(message, type) {
+        // Create message element
+        const messageDiv = document.createElement('div');
+        messageDiv.textContent = message;
+        messageDiv.style.cssText = `
+            position: fixed;
+            top: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            font-weight: 600;
+            z-index: 10000;
+            animation: slideDown 0.3s ease;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+            max-width: 90%;
+            text-align: center;
+        `;
+
+        if (type === 'success') {
+            messageDiv.style.background = 'linear-gradient(135deg, #06C167, #038C4A)';
+            messageDiv.style.color = 'white';
+        } else {
+            messageDiv.style.background = 'linear-gradient(135deg, #FF441F, #FF2200)';
+            messageDiv.style.color = 'white';
+        }
+
+        document.body.appendChild(messageDiv);
+
+        // Remove message after 5 seconds
+        setTimeout(() => {
+            messageDiv.style.animation = 'slideUp 0.3s ease';
+            setTimeout(() => {
+                document.body.removeChild(messageDiv);
+            }, 300);
+        }, 5000);
+    }
+
 
     // ===================================
     // GOOGLE MAPS INTEGRATION
@@ -173,23 +206,30 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Initialize map (placeholder - replace with actual Google Maps API)
     function initMap() {
+        if (mapContainer.querySelector('iframe')) {
+            return;
+        }
         // This is a placeholder. To use real Google Maps:
         // 1. Get a Google Maps API key
         // 2. Add the script: <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
         // 3. Replace this function with actual map initialization
 
-        // For now, we'll create a clickable link to Google Maps
-        const address = 'Av. Principal 123, Col. Centro, Ciudad';
-        const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
+        // For now, we'll embed a Google Maps preview
+        const address = 'Av. Alemania 1240, Moderna, 44190 Guadalajara, Jal.';
+        const mapsUrl = `https://www.google.com/maps?q=${encodeURIComponent(address)}&output=embed`;
 
         mapContainer.innerHTML = `
-            <a href="${mapsUrl}" target="_blank" style="color: white; text-decoration: none; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; font-size: 1.2rem;">
-                <div style="font-size: 4rem; margin-bottom: 1rem;">🗺️</div>
-                <div>Ver en Google Maps</div>
-            </a>
+            <iframe
+                title="Mapa de Perpetuo"
+                src="${mapsUrl}"
+                width="100%"
+                height="100%"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
         `;
-
-        mapContainer.style.cursor = 'pointer';
     }
 
     initMap();

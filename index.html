@@ -9,13 +9,16 @@
     <meta name="keywords" content="cafetería, desayunos, café, postres, Perpetuo">
     <title>Perpetuo - Cafetería & Desayunería</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="Img/logo.png">
 </head>
 
 <body>
     <!-- NAVIGATION -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <a href="#home" class="logo">Perpetuo</a>
+            <a href="#home" class="logo">
+                <img src="Img/letras.png" alt="Perpetuo" class="logo-image">
+            </a>
             <ul class="nav-menu" id="navMenu">
                 <li><a href="#home" class="nav-link">Inicio</a></li>
                 <li><a href="#menu" class="nav-link">Menú</a></li>
@@ -24,6 +27,7 @@
                 <li><a href="#hours" class="nav-link">Horarios</a></li>
                 <li><a href="#location" class="nav-link">Ubicación</a></li>
                 <li><a href="#contact" class="nav-link">Contacto</a></li>
+                <li><a href="#instagram" class="nav-link">Instagram</a></li>
             </ul>
             <div class="menu-toggle" id="menuToggle">
                 <span></span>
@@ -36,9 +40,11 @@
     <!-- HERO SECTION -->
     <section class="hero" id="home">
         <div class="hero-content">
-            <h1>Perpetuo</h1>
-            <p class="hero-subtitle">Cafetería & Desayunería</p>
-            <p class="hero-subtitle">Donde cada mañana es especial</p>
+            <h1 class="hero-title">
+                <img src="Img/Perpetuo.png" alt="Perpetuo" class="hero-logo">
+            </h1>
+            <p class="hero-subtitle">Cafetería</p>
+            <p class="hero-subtitle">Tu ritual diario</p>
             <div class="hero-buttons">
                 <a href="#menu" class="btn btn-primary">Ver Menú</a>
                 <a href="#contact" class="btn btn-secondary">Contáctanos</a>
@@ -47,219 +53,710 @@
     </section>
 
     <!-- MENU SECTION -->
-    <section class="menu section" id="menu">
+        <section class="menu section" id="menu">
+
         <div class="container">
-            <h2 class="section-title">Nuestro Menú</h2>
+
+            <h2 class="section-title">Menu</h2>
+
+
 
             <div class="menu-categories">
+
                 <button class="category-btn active" data-category="all">Todo</button>
-                <button class="category-btn" data-category="desayunos">Desayunos</button>
-                <button class="category-btn" data-category="bebidas">Bebidas</button>
-                <button class="category-btn" data-category="postres">Postres</button>
+
+                <button class="category-btn" data-category="calientes">Bebidas calientes</button>
+
+                <button class="category-btn" data-category="sin-cafe">Bebidas sin cafe</button>
+
+                <button class="category-btn" data-category="frias">Bebidas frias</button>
+
+                <button class="category-btn" data-category="panaderia">Panaderia</button>
+
+                <button class="category-btn" data-category="extras">Extras</button>
+
             </div>
 
+
+
             <div class="menu-grid" id="menuGrid">
-                <!-- Desayunos -->
-                <div class="menu-item" data-category="desayunos">
-                    <div class="menu-item-image">🍳</div>
+
+                <!-- Bebidas calientes -->
+
+                <div class="menu-item" data-category="calientes">
+
+                    <div class="menu-item-image"><svg class="icon icon-cup" viewBox="0 0 64 64" aria-hidden="true"><path d="M18 24h22v14a10 10 0 0 1-10 10h-2a10 10 0 0 1-10-10z"/><path d="M40 28h6a6 6 0 0 1 0 12h-6"/><path d="M24 16c0 4-4 4-4 8"/><path d="M34 16c0 4-4 4-4 8"/></svg></div>
+
                     <div class="menu-item-content">
+
                         <div class="menu-item-header">
-                            <h3 class="menu-item-title">Desayuno Perpetuo</h3>
-                            <span class="menu-item-price">$120</span>
+
+                            <h3 class="menu-item-title">Espresso</h3>
+
+                            <span class="menu-item-price">$40</span>
+
                         </div>
+
                         <p class="menu-item-description">
-                            Huevos al gusto, frijoles refritos, chilaquiles, pan dulce y café americano.
+
+                            Bebida caliente preparada al momento con ingredientes seleccionados.
+
                         </p>
+
                     </div>
+
                 </div>
 
-                <div class="menu-item" data-category="desayunos">
-                    <div class="menu-item-image">🥑</div>
-                    <div class="menu-item-content">
-                        <div class="menu-item-header">
-                            <h3 class="menu-item-title">Tostadas de Aguacate</h3>
-                            <span class="menu-item-price">$95</span>
-                        </div>
-                        <p class="menu-item-description">
-                            Pan artesanal tostado con aguacate fresco, huevo pochado y semillas.
-                        </p>
-                    </div>
-                </div>
 
-                <div class="menu-item" data-category="desayunos">
-                    <div class="menu-item-image">🥞</div>
-                    <div class="menu-item-content">
-                        <div class="menu-item-header">
-                            <h3 class="menu-item-title">Hot Cakes Especiales</h3>
-                            <span class="menu-item-price">$85</span>
-                        </div>
-                        <p class="menu-item-description">
-                            Stack de hot cakes esponjosos con miel de maple, mantequilla y fruta fresca.
-                        </p>
-                    </div>
-                </div>
 
-                <div class="menu-item" data-category="desayunos">
-                    <div class="menu-item-image">🌯</div>
-                    <div class="menu-item-content">
-                        <div class="menu-item-header">
-                            <h3 class="menu-item-title">Burrito de Desayuno</h3>
-                            <span class="menu-item-price">$75</span>
-                        </div>
-                        <p class="menu-item-description">
-                            Tortilla de harina con huevo, jamón, queso, frijoles y salsa.
-                        </p>
-                    </div>
-                </div>
+                <div class="menu-item" data-category="calientes">
 
-                <!-- Bebidas -->
-                <div class="menu-item" data-category="bebidas">
-                    <div class="menu-item-image">☕</div>
-                    <div class="menu-item-content">
-                        <div class="menu-item-header">
-                            <h3 class="menu-item-title">Café Americano</h3>
-                            <span class="menu-item-price">$35</span>
-                        </div>
-                        <p class="menu-item-description">
-                            Café de especialidad, tostado artesanalmente. Servido caliente o frío.
-                        </p>
-                    </div>
-                </div>
+                    <div class="menu-item-image"><svg class="icon icon-cup" viewBox="0 0 64 64" aria-hidden="true"><path d="M18 24h22v14a10 10 0 0 1-10 10h-2a10 10 0 0 1-10-10z"/><path d="M40 28h6a6 6 0 0 1 0 12h-6"/><path d="M24 16c0 4-4 4-4 8"/><path d="M34 16c0 4-4 4-4 8"/></svg></div>
 
-                <div class="menu-item" data-category="bebidas">
-                    <div class="menu-item-image">🥛</div>
                     <div class="menu-item-content">
+
                         <div class="menu-item-header">
-                            <h3 class="menu-item-title">Latte</h3>
+
+                            <h3 class="menu-item-title">Americano</h3>
+
                             <span class="menu-item-price">$50</span>
+
                         </div>
+
                         <p class="menu-item-description">
-                            Espresso con leche vaporizada y arte latte. Disponible con leches vegetales.
+
+                            Bebida caliente preparada al momento con ingredientes seleccionados.
+
                         </p>
+
                     </div>
+
                 </div>
 
-                <div class="menu-item" data-category="bebidas">
-                    <div class="menu-item-image">🍵</div>
-                    <div class="menu-item-content">
-                        <div class="menu-item-header">
-                            <h3 class="menu-item-title">Té Chai Latte</h3>
-                            <span class="menu-item-price">$55</span>
-                        </div>
-                        <p class="menu-item-description">
-                            Té chai especiado con leche vaporizada, canela y miel.
-                        </p>
-                    </div>
-                </div>
 
-                <div class="menu-item" data-category="bebidas">
-                    <div class="menu-item-image">🧋</div>
-                    <div class="menu-item-content">
-                        <div class="menu-item-header">
-                            <h3 class="menu-item-title">Smoothie del Día</h3>
-                            <span class="menu-item-price">$65</span>
-                        </div>
-                        <p class="menu-item-description">
-                            Batido de frutas frescas con yogurt, granola y semillas de chía.
-                        </p>
-                    </div>
-                </div>
 
-                <!-- Postres -->
-                <div class="menu-item" data-category="postres">
-                    <div class="menu-item-image">🍰</div>
+                <div class="menu-item" data-category="calientes">
+
+                    <div class="menu-item-image"><svg class="icon icon-cup" viewBox="0 0 64 64" aria-hidden="true"><path d="M18 24h22v14a10 10 0 0 1-10 10h-2a10 10 0 0 1-10-10z"/><path d="M40 28h6a6 6 0 0 1 0 12h-6"/><path d="M24 16c0 4-4 4-4 8"/><path d="M34 16c0 4-4 4-4 8"/></svg></div>
+
                     <div class="menu-item-content">
+
                         <div class="menu-item-header">
-                            <h3 class="menu-item-title">Pastel de Chocolate</h3>
+
+                            <h3 class="menu-item-title">Capuccino</h3>
+
                             <span class="menu-item-price">$60</span>
+
+                        </div>
+
+                        <p class="menu-item-description">
+
+                            Bebida caliente preparada al momento con ingredientes seleccionados.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="menu-item" data-category="calientes">
+
+                    <div class="menu-item-image"><svg class="icon icon-cup" viewBox="0 0 64 64" aria-hidden="true"><path d="M18 24h22v14a10 10 0 0 1-10 10h-2a10 10 0 0 1-10-10z"/><path d="M40 28h6a6 6 0 0 1 0 12h-6"/><path d="M24 16c0 4-4 4-4 8"/><path d="M34 16c0 4-4 4-4 8"/></svg></div>
+
+                    <div class="menu-item-content">
+
+                        <div class="menu-item-header">
+
+                            <h3 class="menu-item-title">Latte</h3>
+
+                            <span class="menu-item-price">$60</span>
+
+                        </div>
+
+                        <p class="menu-item-description">
+
+                            Bebida caliente preparada al momento con ingredientes seleccionados.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="menu-item" data-category="calientes">
+
+                    <div class="menu-item-image"><svg class="icon icon-cup" viewBox="0 0 64 64" aria-hidden="true"><path d="M18 24h22v14a10 10 0 0 1-10 10h-2a10 10 0 0 1-10-10z"/><path d="M40 28h6a6 6 0 0 1 0 12h-6"/><path d="M24 16c0 4-4 4-4 8"/><path d="M34 16c0 4-4 4-4 8"/></svg></div>
+
+                    <div class="menu-item-content">
+
+                        <div class="menu-item-header">
+
+                            <h3 class="menu-item-title">Chocolate</h3>
+
+                            <span class="menu-item-price">$60</span>
+
+                        </div>
+
+                        <p class="menu-item-description">
+
+                            Bebida caliente preparada al momento con ingredientes seleccionados.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="menu-item" data-category="calientes">
+
+                    <div class="menu-item-image"><svg class="icon icon-cup" viewBox="0 0 64 64" aria-hidden="true"><path d="M18 24h22v14a10 10 0 0 1-10 10h-2a10 10 0 0 1-10-10z"/><path d="M40 28h6a6 6 0 0 1 0 12h-6"/><path d="M24 16c0 4-4 4-4 8"/><path d="M34 16c0 4-4 4-4 8"/></svg></div>
+
+                    <div class="menu-item-content">
+
+                        <div class="menu-item-header">
+
+                            <h3 class="menu-item-title">Moka</h3>
+
+                            <span class="menu-item-price">$65</span>
+
+                        </div>
+
+                        <p class="menu-item-description">
+
+                            Bebida caliente preparada al momento con ingredientes seleccionados.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="menu-item" data-category="calientes">
+
+                    <div class="menu-item-image"><svg class="icon icon-cup" viewBox="0 0 64 64" aria-hidden="true"><path d="M18 24h22v14a10 10 0 0 1-10 10h-2a10 10 0 0 1-10-10z"/><path d="M40 28h6a6 6 0 0 1 0 12h-6"/><path d="M24 16c0 4-4 4-4 8"/><path d="M34 16c0 4-4 4-4 8"/></svg></div>
+
+                    <div class="menu-item-content">
+
+                        <div class="menu-item-header">
+
+                            <h3 class="menu-item-title">Chai Latte</h3>
+
+                            <span class="menu-item-price">$65</span>
+
+                        </div>
+
+                        <p class="menu-item-description">
+
+                            Bebida caliente preparada al momento con ingredientes seleccionados.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="menu-item" data-category="calientes">
+
+                    <div class="menu-item-image"><svg class="icon icon-cup" viewBox="0 0 64 64" aria-hidden="true"><path d="M18 24h22v14a10 10 0 0 1-10 10h-2a10 10 0 0 1-10-10z"/><path d="M40 28h6a6 6 0 0 1 0 12h-6"/><path d="M24 16c0 4-4 4-4 8"/><path d="M34 16c0 4-4 4-4 8"/></svg></div>
+
+                    <div class="menu-item-content">
+
+                        <div class="menu-item-header">
+
+                            <h3 class="menu-item-title">Matcha Latte</h3>
+
+                            <span class="menu-item-price">$75</span>
+
+                        </div>
+
+                        <p class="menu-item-description">
+
+                            Bebida caliente preparada al momento con ingredientes seleccionados.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Bebidas sin cafe -->
+
+                <div class="menu-item" data-category="sin-cafe">
+
+                    <div class="menu-item-image"><svg class="icon icon-glass" viewBox="0 0 64 64" aria-hidden="true"><path d="M22 14h20l-4 36a8 8 0 0 1-12 0z"/><path d="M24 24h16"/></svg></div>
+
+                    <div class="menu-item-content">
+
+                        <div class="menu-item-header">
+
+                            <h3 class="menu-item-title">Agua embotellada</h3>
+
+                            <span class="menu-item-price">$10</span>
+
+                        </div>
+
+                        <p class="menu-item-description">
+
+                            Bebida sin cafe, ligera y refrescante para cualquier momento.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="menu-item" data-category="sin-cafe">
+
+                    <div class="menu-item-image"><svg class="icon icon-glass" viewBox="0 0 64 64" aria-hidden="true"><path d="M22 14h20l-4 36a8 8 0 0 1-12 0z"/><path d="M24 24h16"/></svg></div>
+
+                    <div class="menu-item-content">
+
+                        <div class="menu-item-header">
+
+                            <h3 class="menu-item-title">Agua mineral</h3>
+
+                            <span class="menu-item-price">$20</span>
+
+                        </div>
+
+                        <p class="menu-item-description">
+
+                            Bebida sin cafe, ligera y refrescante para cualquier momento.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="menu-item" data-category="sin-cafe">
+
+                    <div class="menu-item-image"><svg class="icon icon-glass" viewBox="0 0 64 64" aria-hidden="true"><path d="M22 14h20l-4 36a8 8 0 0 1-12 0z"/><path d="M24 24h16"/></svg></div>
+
+                    <div class="menu-item-content">
+
+                        <div class="menu-item-header">
+
+                            <h3 class="menu-item-title">Refrescos</h3>
+
+                            <span class="menu-item-price">$20</span>
+
+                        </div>
+
+                        <p class="menu-item-description">
+
+                            Bebida sin cafe, ligera y refrescante para cualquier momento.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="menu-item" data-category="sin-cafe">
+
+                    <div class="menu-item-image"><svg class="icon icon-glass" viewBox="0 0 64 64" aria-hidden="true"><path d="M22 14h20l-4 36a8 8 0 0 1-12 0z"/><path d="M24 24h16"/></svg></div>
+
+                    <div class="menu-item-content">
+
+                        <div class="menu-item-header">
+
+                            <h3 class="menu-item-title">Vaso de leche</h3>
+
+                            <span class="menu-item-price">$20</span>
+
+                        </div>
+
+                        <p class="menu-item-description">
+
+                            Bebida sin cafe, ligera y refrescante para cualquier momento.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="menu-item" data-category="sin-cafe">
+
+                    <div class="menu-item-image"><svg class="icon icon-glass" viewBox="0 0 64 64" aria-hidden="true"><path d="M22 14h20l-4 36a8 8 0 0 1-12 0z"/><path d="M24 24h16"/></svg></div>
+
+                    <div class="menu-item-content">
+
+                        <div class="menu-item-header">
+
+                            <h3 class="menu-item-title">Freelife</h3>
+
+                            <span class="menu-item-price">$25</span>
+
+                        </div>
+
+                        <p class="menu-item-description">
+
+                            Bebida sin cafe, ligera y refrescante para cualquier momento.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Bebidas frias -->
+
+                <div class="menu-item" data-category="frias">
+
+                    <div class="menu-item-image"><svg class="icon icon-iced" viewBox="0 0 64 64" aria-hidden="true"><path d="M22 12h20l-4 38a8 8 0 0 1-12 0z"/><path d="M28 6l12 10"/><path d="M26 26h12"/></svg></div>
+
+                    <div class="menu-item-content">
+
+                        <div class="menu-item-header">
+
+                            <h3 class="menu-item-title">Americano</h3>
+
+                            <span class="menu-item-price">$55</span>
+
+                        </div>
+
+                        <p class="menu-item-description">
+
+                            Bebida fria preparada al momento, suave y refrescante.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="menu-item" data-category="frias">
+
+                    <div class="menu-item-image"><svg class="icon icon-iced" viewBox="0 0 64 64" aria-hidden="true"><path d="M22 12h20l-4 38a8 8 0 0 1-12 0z"/><path d="M28 6l12 10"/><path d="M26 26h12"/></svg></div>
+
+                    <div class="menu-item-content">
+
+                        <div class="menu-item-header">
+
+                            <h3 class="menu-item-title">Capuccino</h3>
+
+                            <span class="menu-item-price">$65</span>
+
+                        </div>
+
+                        <p class="menu-item-description">
+
+                            Bebida fria preparada al momento, suave y refrescante.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="menu-item" data-category="frias">
+
+                    <div class="menu-item-image"><svg class="icon icon-iced" viewBox="0 0 64 64" aria-hidden="true"><path d="M22 12h20l-4 38a8 8 0 0 1-12 0z"/><path d="M28 6l12 10"/><path d="M26 26h12"/></svg></div>
+
+                    <div class="menu-item-content">
+
+                        <div class="menu-item-header">
+
+                            <h3 class="menu-item-title">Latte</h3>
+
+                            <span class="menu-item-price">$65</span>
+
+                        </div>
+
+                        <p class="menu-item-description">
+
+                            Bebida fria preparada al momento, suave y refrescante.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="menu-item" data-category="frias">
+
+                    <div class="menu-item-image"><svg class="icon icon-iced" viewBox="0 0 64 64" aria-hidden="true"><path d="M22 12h20l-4 38a8 8 0 0 1-12 0z"/><path d="M28 6l12 10"/><path d="M26 26h12"/></svg></div>
+
+                    <div class="menu-item-content">
+
+                        <div class="menu-item-header">
+
+                            <h3 class="menu-item-title">Chocolate</h3>
+
+                            <span class="menu-item-price">$65</span>
+
+                        </div>
+
+                        <p class="menu-item-description">
+
+                            Bebida fria preparada al momento, suave y refrescante.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="menu-item" data-category="frias">
+
+                    <div class="menu-item-image"><svg class="icon icon-iced" viewBox="0 0 64 64" aria-hidden="true"><path d="M22 12h20l-4 38a8 8 0 0 1-12 0z"/><path d="M28 6l12 10"/><path d="M26 26h12"/></svg></div>
+
+                    <div class="menu-item-content">
+
+                        <div class="menu-item-header">
+
+                            <h3 class="menu-item-title">Moka</h3>
+
+                            <span class="menu-item-price">$70</span>
+
+                        </div>
+
+                        <p class="menu-item-description">
+
+                            Bebida fria preparada al momento, suave y refrescante.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="menu-item" data-category="frias">
+
+                    <div class="menu-item-image"><svg class="icon icon-iced" viewBox="0 0 64 64" aria-hidden="true"><path d="M22 12h20l-4 38a8 8 0 0 1-12 0z"/><path d="M28 6l12 10"/><path d="M26 26h12"/></svg></div>
+
+                    <div class="menu-item-content">
+
+                        <div class="menu-item-header">
+
+                            <h3 class="menu-item-title">Chai Latte</h3>
+
+                            <span class="menu-item-price">$70</span>
+
+                        </div>
+
+                        <p class="menu-item-description">
+
+                            Bebida fria preparada al momento, suave y refrescante.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="menu-item" data-category="frias">
+
+                    <div class="menu-item-image"><svg class="icon icon-iced" viewBox="0 0 64 64" aria-hidden="true"><path d="M22 12h20l-4 38a8 8 0 0 1-12 0z"/><path d="M28 6l12 10"/><path d="M26 26h12"/></svg></div>
+
+                    <div class="menu-item-content">
+
+                        <div class="menu-item-header">
+
+                            <h3 class="menu-item-title">Matcha Latte</h3>
+
+                            <span class="menu-item-price">$80</span>
+
+                        </div>
+
+                        <p class="menu-item-description">
+
+                            Bebida fria preparada al momento, suave y refrescante.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                                <!-- Panaderia -->
+
+                <div class="menu-item" data-category="panaderia">
+                    <div class="menu-item-image"><svg class="icon icon-concha" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="18"/><path d="M20 34c4-6 20-6 24 0"/><path d="M22 40c4-4 16-4 20 0"/></svg></div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-title">Concha</h3>
+                            <span class="menu-item-price">$20</span>
                         </div>
                         <p class="menu-item-description">
-                            Rebanada de pastel de chocolate belga con ganache y frutos rojos.
+                            Panaderia fresca del dia, suave y recien horneada.
                         </p>
                     </div>
                 </div>
 
-                <div class="menu-item" data-category="postres">
-                    <div class="menu-item-image">🥐</div>
+                <div class="menu-item" data-category="panaderia">
+                    <div class="menu-item-image"><svg class="icon icon-cookie" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="18"/><circle cx="26" cy="26" r="2"/><circle cx="38" cy="34" r="2"/></svg></div>
                     <div class="menu-item-content">
                         <div class="menu-item-header">
-                            <h3 class="menu-item-title">Croissant</h3>
-                            <span class="menu-item-price">$45</span>
+                            <h3 class="menu-item-title">Galleta de vainilla</h3>
+                            <span class="menu-item-price">$20</span>
                         </div>
                         <p class="menu-item-description">
-                            Croissant francés recién horneado. Disponible natural o relleno.
+                            Panaderia fresca del dia, suave y recien horneada.
                         </p>
                     </div>
                 </div>
 
-                <div class="menu-item" data-category="postres">
-                    <div class="menu-item-image">🍪</div>
+                <div class="menu-item" data-category="panaderia">
+                    <div class="menu-item-image"><svg class="icon icon-cookie-chip" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="18"/><circle cx="24" cy="26" r="2"/><circle cx="36" cy="24" r="2"/><circle cx="40" cy="36" r="2"/><circle cx="28" cy="38" r="2"/><circle cx="34" cy="30" r="2"/></svg></div>
                     <div class="menu-item-content">
                         <div class="menu-item-header">
-                            <h3 class="menu-item-title">Galletas Artesanales</h3>
+                            <h3 class="menu-item-title">Galleta Chocochip</h3>
+                            <span class="menu-item-price">$20</span>
+                        </div>
+                        <p class="menu-item-description">
+                            Panaderia fresca del dia, suave y recien horneada.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="panaderia">
+                    <div class="menu-item-image"><svg class="icon icon-chocolatin" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="18"/><path d="M20 32h24"/><path d="M32 20v24"/></svg></div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-title">Chocolatin</h3>
                             <span class="menu-item-price">$30</span>
                         </div>
                         <p class="menu-item-description">
-                            Galletas horneadas diariamente. Chispas de chocolate, avena o nuez.
+                            Panaderia fresca del dia, suave y recien horneada.
                         </p>
                     </div>
+                </div>
+<!-- Extras -->
+
+                <div class="menu-item" data-category="extras">
+
+                    <div class="menu-item-image"><svg class="icon icon-plus" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="18"/><path d="M32 24v16"/><path d="M24 32h16"/></svg></div>
+
+                    <div class="menu-item-content">
+
+                        <div class="menu-item-header">
+
+                            <h3 class="menu-item-title">Shot de Espresso</h3>
+
+                            <span class="menu-item-price">$12</span>
+
+                        </div>
+
+                        <p class="menu-item-description">
+
+                            Extra opcional para personalizar tu bebida.
+
+                        </p>
+
+                    </div>
+
                 </div>
 
-                <div class="menu-item" data-category="postres">
-                    <div class="menu-item-image">🧁</div>
+
+
+                <div class="menu-item" data-category="extras">
+
+                    <div class="menu-item-image"><svg class="icon icon-plus" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="18"/><path d="M32 24v16"/><path d="M24 32h16"/></svg></div>
+
                     <div class="menu-item-content">
+
                         <div class="menu-item-header">
-                            <h3 class="menu-item-title">Cupcake Especial</h3>
-                            <span class="menu-item-price">$50</span>
+
+                            <h3 class="menu-item-title">Leche vegetal</h3>
+
+                            <span class="menu-item-price">$15</span>
+
                         </div>
+
                         <p class="menu-item-description">
-                            Cupcake del día con frosting de crema y decoración artesanal.
+
+                            Extra opcional para personalizar tu bebida.
+
                         </p>
+
                     </div>
+
                 </div>
+
             </div>
+
         </div>
+
     </section>
 
     <!-- SERVICES SECTION -->
-    <section class="services section" id="services">
+            <section class="services section" id="services">
         <div class="container">
             <h2 class="section-title">Nuestros Servicios</h2>
             <div class="services-grid">
                 <div class="service-card">
-                    <div class="service-icon">🛎️</div>
-                    <h3>Servicio a Domicilio</h3>
-                    <p>Entregamos tus desayunos favoritos directamente a tu puerta.</p>
+                    <div class="service-icon"><svg class="icon icon-cup" viewBox="0 0 64 64" aria-hidden="true"><path d="M18 24h22v14a10 10 0 0 1-10 10h-2a10 10 0 0 1-10-10z"/><path d="M40 28h6a6 6 0 0 1 0 12h-6"/><path d="M24 16c0 4-4 4-4 8"/><path d="M34 16c0 4-4 4-4 8"/></svg></div>
+                    <h3>Cafe de especialidad</h3>
+                    <p>Extracciones cuidadas y granos seleccionados en cada taza.</p>
                 </div>
 
                 <div class="service-card">
-                    <div class="service-icon">📱</div>
-                    <h3>Pedidos en Línea</h3>
-                    <p>Ordena fácilmente a través de nuestra app o sitio web.</p>
+                    <div class="service-icon"><svg class="icon icon-bread" viewBox="0 0 64 64" aria-hidden="true"><path d="M16 28c0-8 7-14 16-14s16 6 16 14v18a8 8 0 0 1-8 8H24a8 8 0 0 1-8-8z"/><path d="M24 28c0-5 4-9 8-9s8 4 8 9"/></svg></div>
+                    <h3>Panaderia seleccionada</h3>
+                    <p>Pan y reposteria de proveedores locales.</p>
                 </div>
 
                 <div class="service-card">
-                    <div class="service-icon">🎉</div>
-                    <h3>Eventos Especiales</h3>
-                    <p>Catering para desayunos corporativos y eventos privados.</p>
+                    <div class="service-icon"><svg class="icon icon-cookie" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="18"/><circle cx="26" cy="26" r="2"/><circle cx="38" cy="34" r="2"/></svg></div>
+                    <h3>Postres artesanales</h3>
+                    <p>Dulces clasicos para acompanar tu cafe.</p>
                 </div>
 
                 <div class="service-card">
-                    <div class="service-icon">☕</div>
-                    <h3>Café de Especialidad</h3>
-                    <p>Granos seleccionados y tostados artesanalmente.</p>
+                    <div class="service-icon"><svg class="icon icon-iced" viewBox="0 0 64 64" aria-hidden="true"><path d="M22 12h20l-4 38a8 8 0 0 1-12 0z"/><path d="M28 6l12 10"/><path d="M26 26h12"/></svg></div>
+                    <h3>Bebidas frias y calientes</h3>
+                    <p>Desde espresso hasta bebidas refrescantes.</p>
                 </div>
 
                 <div class="service-card">
-                    <div class="service-icon">🥖</div>
-                    <h3>Panadería Fresca</h3>
-                    <p>Pan y repostería horneados diariamente en nuestro local.</p>
+                    <div class="service-icon"><svg class="icon icon-table" viewBox="0 0 64 64" aria-hidden="true"><path d="M16 24h32"/><path d="M20 24v24"/><path d="M44 24v24"/><path d="M14 38h36"/></svg></div>
+                    <h3>Consumo en sitio</h3>
+                    <p>Ambiente comodo para disfrutar con calma.</p>
                 </div>
 
                 <div class="service-card">
-                    <div class="service-icon">🌱</div>
-                    <h3>Opciones Saludables</h3>
-                    <p>Menú con alternativas veganas, vegetarianas y sin gluten.</p>
+                    <div class="service-icon"><svg class="icon icon-togo" viewBox="0 0 64 64" aria-hidden="true"><path d="M22 18h20l-2 6H24z"/><path d="M24 24h16l-2 26a6 6 0 0 1-6 6h-0a6 6 0 0 1-6-6z"/><path d="M20 18h24"/></svg></div>
+                    <h3>Para llevar</h3>
+                    <p>Pide en mostrador y lleva tu cafe favorito.</p>
                 </div>
             </div>
         </div>
@@ -273,19 +770,15 @@
                 <div class="hours-grid">
                     <div class="hours-row">
                         <span class="hours-day">Lunes - Viernes</span>
-                        <span class="hours-time">7:00 AM - 3:00 PM</span>
+                        <span class="hours-time">8:00 AM - 5:00 PM</span>
                     </div>
                     <div class="hours-row">
                         <span class="hours-day">Sábado</span>
-                        <span class="hours-time">8:00 AM - 4:00 PM</span>
+                        <span class="hours-time">8:00 AM - 1:00 PM</span>
                     </div>
                     <div class="hours-row">
                         <span class="hours-day">Domingo</span>
-                        <span class="hours-time">8:00 AM - 2:00 PM</span>
-                    </div>
-                    <div class="hours-row">
-                        <span class="hours-day">Días Festivos</span>
-                        <span class="hours-time">Horario Especial</span>
+                        <span class="hours-time">Cerrado</span>
                     </div>
                 </div>
             </div>
@@ -304,35 +797,33 @@
                             <span class="location-icon">📍</span>
                             <div class="location-text">
                                 <strong>Dirección:</strong><br>
-                                Av. Principal #123, Col. Centro<br>
-                                Ciudad, Estado, CP 12345
-                            </div>
+Av. Alemania 1238, Moderna, 44190 Guadalajara, Jal.                            </div>
                         </div>
                         <div class="location-item">
                             <span class="location-icon">🚗</span>
                             <div class="location-text">
-                                <strong>Estacionamiento:</strong><br>
-                                Disponible en la parte trasera del local
+                                <strong>Para llevar o comer en sitio:</strong><br>
+                                Mesas disponibles
                             </div>
                         </div>
                         <div class="location-item">
                             <span class="location-icon">🚌</span>
                             <div class="location-text">
                                 <strong>Transporte Público:</strong><br>
-                                Líneas 5, 12 y 18 - Parada Centro
+                                A unas cuadra de la estacion de tren Washington
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="map-container" id="map">
-                    🗺️
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d554.9392428903786!2d-103.35595308957741!3d20.66260628534336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428b36f74d1e959%3A0x86d56135892aa63a!2sCafeter%C3%ADa%20Perpetuo!5e0!3m2!1ses-419!2smx!4v1768575139349!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- DELIVERY SECTION -->
-    <section class="delivery section" id="delivery">
+   <!--- <section class="delivery section" id="delivery">
         <div class="container">
             <h2 class="section-title">Pide a Domicilio</h2>
             <p style="text-align: center; margin-bottom: 3rem; font-size: 1.2rem;">Disfruta de Perpetuo sin salir de
@@ -352,6 +843,103 @@
                 </a>
             </div>
         </div>
+    </section>-->
+
+    <!-- INSTAGRAM & REVIEWS SECTION -->
+    <section class="social-proof section" id="instagram">
+        <div class="container">
+            <h2 class="section-title">Síguenos y Descubre lo que Dicen de Nosotros</h2>
+            
+            <div class="social-proof-grid">
+                <!-- Instagram Column -->
+                <div class="social-proof-column">
+                    <h3 class="column-title">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" style="vertical-align: middle; margin-right: 8px;">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                        Instagram
+                    </h3>
+            <h2 class="section-title">Síguenos en Instagram</h2>
+            <p style="text-align: center; margin-bottom: 2rem; font-size: 1.2rem;">Descubre nuestras creaciones diarias</p>
+            
+            <div class="instagram-feed">
+                <!-- Instagram Embed Widget -->
+                <div class="instagram-embed-container">
+                    <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/perpetuocafeteria/" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
+                        <div style="padding:16px;">
+                            <a href="https://www.instagram.com/perpetuocafeteria/" style="background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank">
+                                <div style="display: flex; flex-direction: row; align-items: center;">
+                                    <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div>
+                                    <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;">
+                                        <div style="background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div>
+                                        <div style="background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div>
+                                    </div>
+                                </div>
+                                <div style="padding: 19% 0;"></div>
+                                <div style="display:block; height:50px; margin:0 auto 12px; width:50px;">
+                                    <svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <g transform="translate(-511.000000, -20.000000)" fill="#000000">
+                                                <g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </div>
+                                <div style="padding-top: 8px;">
+                                    <div style="color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">Ver esta publicación en Instagram</div>
+                                </div>
+                            </a>
+                        </div>
+                    </blockquote>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="https://www.instagram.com/perpetuocafeteria/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="vertical-align: middle; margin-right: 8px;">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                    </svg>
+                    Síguenos @perpetuocafeteria
+                </a>
+            </div>
+                </div>
+
+                <!-- Google Reviews Column -->
+                <div class="social-proof-column">
+                    <h3 class="column-title">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" style="vertical-align: middle; margin-right: 8px;">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                        Reseñas de Google
+                    </h3>
+                    <p style="text-align: center; margin-bottom: 1.5rem; color: #666;">Lo que dicen nuestros clientes</p>
+                    
+                    <div class="google-reviews-container">
+                        <div class="reviews-widget">
+                            <div class="reviews-header">
+                                <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" alt="Google" style="height: 24px; margin-bottom: 1rem;">
+                                <h4 style="margin: 0.5rem 0; color: var(--color-dark);">Cafetería Perpetuo</h4>
+                                <div class="star-rating" id="overall-rating">
+                                    <span style="color: #fbbc04; font-size: 1.5rem;">★★★★★</span>
+                                </div>
+                                <p style="color: #666; margin-top: 0.5rem;" id="rating-text">Calificación de Google</p>
+                            </div>
+                            
+                            <!-- Reviews Container -->
+                            <div id="reviews-list" class="reviews-list">
+                                <p style="color: #666;">Cargando reseñas...</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div style="text-align: center; margin-top: 1.5rem;">
+                        <a href="https://www.google.com/maps/place/Cafeter%C3%ADa+Perpetuo/@20.6626063,-103.3559531,21z/data=!4m8!3m7!1s0x8428b36f74d1e959:0x86d56135892aa63a!8m2!3d20.6626063!4d-103.3559531!9m1!1b1!16s%2Fg%2F11vw0h8t8q" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                            Ver todas las reseñas
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- CONTACT SECTION -->
@@ -359,7 +947,14 @@
         <div class="container">
             <h2 class="section-title">Contáctanos</h2>
             <div class="contact-container">
-                <form class="contact-form" id="contactForm">
+                <!-- 📧 CAMBIAR CORREO AQUÍ ⬇️ En la línea de abajo, reemplaza el email -->
+                <form class="contact-form" id="contactForm" action="https://formsubmit.co/carlos@perpetuocafe.com.mx" method="POST">
+                    <!-- FormSubmit Configuration -->
+                    <input type="hidden" name="_subject" value="Nuevo mensaje de contacto - Perpetuo Café">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="text" name="_honey" style="display:none">
+                    
                     <div class="form-group">
                         <label for="name">Nombre Completo</label>
                         <input type="text" id="name" name="name" required>
@@ -380,21 +975,21 @@
                 </form>
 
                 <div class="contact-info">
-                    <div class="contact-card">
+                    <a href="tel:+523312651084" class="contact-card">
                         <div class="contact-card-icon">📞</div>
                         <h4>Teléfono</h4>
-                        <p>(55) 1234-5678</p>
-                    </div>
-                    <div class="contact-card">
+                        <p>33 1265 1084</p>
+                    </a>
+                    <a href="mailto:carlos@perpetuocafe.com.mx" class="contact-card">
                         <div class="contact-card-icon">📧</div>
                         <h4>Email</h4>
-                        <p>hola@perpetuo.com</p>
-                    </div>
-                    <div class="contact-card">
+                        <p>carlos@perpetuocafe.com.mx</p>
+                    </a>
+                    <a href="https://wa.me/523312651084" target="_blank" rel="noopener noreferrer" class="contact-card">
                         <div class="contact-card-icon">💬</div>
                         <h4>WhatsApp</h4>
-                        <p>(55) 9876-5432</p>
-                    </div>
+                        <p>33 1265 1084</p>
+                    </a>
                 </div>
             </div>
         </div>
@@ -407,12 +1002,13 @@
                 <div class="footer-section">
                     <h3>Perpetuo</h3>
                     <p>Cafetería & Desayunería</p>
-                    <p>Donde cada mañana es especial desde 2020</p>
+                    <p>Tu ritual diario</p>
                     <div class="social-links">
-                        <a href="#" class="social-link" aria-label="Facebook">📘</a>
-                        <a href="#" class="social-link" aria-label="Instagram">📷</a>
-                        <a href="#" class="social-link" aria-label="Twitter">🐦</a>
-                        <a href="#" class="social-link" aria-label="TikTok">🎵</a>
+                        <a href="https://www.instagram.com/perpetuocafeteria?igsh=bGR4bWVramd3OTd5" class="social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
                     </div>
                 </div>
                 <div class="footer-section">
@@ -424,23 +1020,27 @@
                 </div>
                 <div class="footer-section">
                     <h3>Contacto</h3>
-                    <p>📞 (55) 1234-5678</p>
-                    <p>📧 hola@perpetuo.com</p>
-                    <p>📍 Av. Principal #123</p>
+                    <p>📞 33 1265 1084</p>
+                    <p>📧 carlos@perpetuocafe.com.mx</p>
+                    <p>📍 Av. Alemania 1238, Moderna, 44190 Guadalajara, Jal.</p>
                 </div>
                 <div class="footer-section">
                     <h3>Horarios</h3>
-                    <p>Lun-Vie: 7:00 AM - 3:00 PM</p>
-                    <p>Sábado: 8:00 AM - 4:00 PM</p>
-                    <p>Domingo: 8:00 AM - 2:00 PM</p>
+                    <p>Lun-Vie: 8:00 AM - 5:00 PM</p>
+                    <p>Sábado: 8:00 AM - 1:00 PM</p>
+                    <p>Domingo: Cerrado</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Perpetuo Cafetería & Desayunería. Todos los derechos reservados.</p>
+                <p>&copy; 2026 Perpetuo Cafetería. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
 
+
+    <script async src="https://www.instagram.com/embed.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBAXJRhP-_Z1XX-x-X_iMzxodBkDonYmus&libraries=places&callback=initGoogleReviews" async defer></script>
+    <script src="google-reviews.js"></script>
     <script src="script.js"></script>
 </body>
 
